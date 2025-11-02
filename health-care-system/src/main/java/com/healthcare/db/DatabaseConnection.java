@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     public static Connection getConnection() throws SQLException {
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(
-                    "jdbc:oracle:thin:@localhost:1521:xe", "admin", "manage"
+                    "jdbc:mysql://localhost:3306/healthcare_db", "root", "Kathua@25"
             );
         } catch (Exception e) {
             throw new SQLException("Database connection failed.", e);
@@ -17,3 +17,4 @@ public class DatabaseConnection {
     }
 
 }
+
