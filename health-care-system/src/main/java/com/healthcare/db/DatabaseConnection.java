@@ -9,7 +9,7 @@ public class DatabaseConnection {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/healthcare_db", "root", "Kathua@25"
+                    "jdbc:mysql://localhost:3306/healthcare_db", "root", "password"
             );
         } catch (Exception e) {
             throw new SQLException("Database connection failed.", e);
@@ -17,4 +17,5 @@ public class DatabaseConnection {
     }
 
 }
+
 
